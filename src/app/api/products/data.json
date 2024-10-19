@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Limited Edition 2k24",
+      "slug": "tshirt-1",
+      "price": 39.99,
+      "image": "/product1.png",
+      "description": "88% cotton and 12% polyester",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Brown Edition",
+      "slug": "tshirt-2",
+      "price": 39.99,
+      "image": "/product2.png",
+      "description": "88% cotton and 12% polyester",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Black Edition",
+      "slug": "tshirt-3",
+      "price": 19.99,
+      "image": "/product3.png",
+      "description": "100% cotton",
+      "featured": true
+    }
+  ]
+}
