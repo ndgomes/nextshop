@@ -1,6 +1,9 @@
 describe("Add product to cart", () => {
+  beforeEach(() => {
+    cy.visit("/");
+  });
+
   it("should be able to navigate to the product page and add it to the cart", () => {
-    cy.visit("http://localhost:3000");
     cy.get('a[href^="/product"]').first().click();
 
     cy.location("pathname").should("include", "/product");
@@ -10,7 +13,6 @@ describe("Add product to cart", () => {
   });
 
   it("should not count duplicate products in the cart", () => {
-    cy.visit("http://localhost:3000");
     cy.get('a[href^="/product"]').first().click();
 
     cy.location("pathname").should("include", "/product");
@@ -22,8 +24,6 @@ describe("Add product to cart", () => {
   });
 
   it("should be able to search for products and add them to the cart", () => {
-    cy.visit("http://localhost:3000");
-
     cy.get('input[name="q"]').type("Edition").parent("form").submit();
 
     cy.location("pathname").should("include", "/search");
